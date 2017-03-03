@@ -2,7 +2,7 @@
 
 ## Use
 ```javascript
-var Promise = require("promise-queue")
+var Promise = require("promise-with-queue")
 
 var func = new Promise.queue([
     new Promise((resolve, reject) => { resolve(1) }),
