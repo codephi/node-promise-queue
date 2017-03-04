@@ -11,8 +11,8 @@ Promise.queue = function(promises){
 
         var promise = (this.promises[this.pointer] instanceof Promise) ? this.promises[this.pointer] : this.promises[this.pointer](data);
 
-        promise.then(data => {
-            _next.call(this, data)
+        promise.then(result => {
+            _next.call(this, result)
         }, err => {
             this.reject(err)
         })
