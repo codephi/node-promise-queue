@@ -1,4 +1,7 @@
 # Promise with Queue
+Execute a function queue to receive value passed in resolving of the last call function.
+
+You can override the default Promise or use a unique variable for this module. In any of the options you will have all the other standard Promise methods available.
 
 ## Use
 ```javascript
@@ -6,7 +9,11 @@ var Promise = require("promise-with-queue")
 
 var func = new Promise.queue([
     new Promise((resolve, reject) => { resolve(1) }),
-    data => new Promise((resolve, reject) => { resolve(++data) }),
+    data => new Promise((resolve, reject) => { 
+        setTimeout(() => {
+            resolve(--data)
+        }, 3000) 
+    }),
     data => new Promise((resolve, reject) => { resolve(++data) }),
 ])
 
