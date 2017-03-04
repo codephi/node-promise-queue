@@ -14,7 +14,7 @@ Promise.queue = function(promises){
         promise.then(data => {
             _next.call(this, data)
         }, err => {
-            this.reject(data)
+            this.reject(err)
         })
     }
 
