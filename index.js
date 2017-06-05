@@ -1,11 +1,12 @@
-Promise.queue = function(promises){
-    var _next = (data, resolve, reject) => {
+Promise.queue = function(promises) {
+    var _next = function(data, resolve, reject) {
         if (!this.promises) {
             this.promises = data;
             this.pointer = 0;
             this.reject = reject
             this.resolve = resolve
-        } else if (!this.promises[++this.pointer]) {
+        }
+        else if (!this.promises[++this.pointer]) {
             return this.resolve(data)
         }
 
