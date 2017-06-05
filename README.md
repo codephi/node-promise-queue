@@ -1,11 +1,11 @@
-# Queue Promise
+# QueuePro
 Execute a function queue to receive value passed in resolving of the last call function.
 
 You can override the default Promise or use a unique variable for this module. In any of the options you will have all the other standard Promise methods available.
 
 ## Use
 ```javascript
-var queue = require("queue-promise")
+var queue = require("queuepro")
 
 var func = queue([
     new Promise((resolve, reject) => { resolve(1) }),

@@ -14,21 +14,21 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/home/ubuntu/workspace',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/ubuntu/.npm/queue-promise/0.1.0/package.tgz not in flight; packing
+8 verbose addLocalDirectory /home/ubuntu/.npm/queue-promise/0.0.1/package.tgz not in flight; packing
 9 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-10 verbose tar pack [ '/home/ubuntu/.npm/queue-promise/0.1.0/package.tgz',
+10 verbose tar pack [ '/home/ubuntu/.npm/queue-promise/0.0.1/package.tgz',
 10 verbose tar pack   '/home/ubuntu/workspace' ]
-11 verbose tarball /home/ubuntu/.npm/queue-promise/0.1.0/package.tgz
+11 verbose tarball /home/ubuntu/.npm/queue-promise/0.0.1/package.tgz
 12 verbose folder /home/ubuntu/workspace
-13 info prepublish queue-promise@0.1.0
-14 verbose addLocalTarball adding from inside cache /home/ubuntu/.npm/queue-promise/0.1.0/package.tgz
+13 info prepublish queue-promise@0.0.1
+14 verbose addLocalTarball adding from inside cache /home/ubuntu/.npm/queue-promise/0.0.1/package.tgz
 15 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-16 silly cache afterAdd queue-promise@0.1.0
-17 verbose afterAdd /home/ubuntu/.npm/queue-promise/0.1.0/package/package.json not in flight; writing
+16 silly cache afterAdd queue-promise@0.0.1
+17 verbose afterAdd /home/ubuntu/.npm/queue-promise/0.0.1/package/package.json not in flight; writing
 18 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-19 verbose afterAdd /home/ubuntu/.npm/queue-promise/0.1.0/package/package.json written
+19 verbose afterAdd /home/ubuntu/.npm/queue-promise/0.0.1/package/package.json written
 20 silly publish { name: 'queue-promise',
-20 silly publish   version: '0.1.0',
+20 silly publish   version: '0.0.1',
 20 silly publish   description: 'Execute a function queue to receive value passed in resolving of the last call function.',
 20 silly publish   main: 'index.js',
 20 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
@@ -39,11 +39,11 @@
 20 silly publish   license: 'ISC',
 20 silly publish   bugs: { url: 'https://github.com/PhilippeAssis/node-promise-queue/issues' },
 20 silly publish   homepage: 'https://github.com/PhilippeAssis/node-promise-queue#readme',
-20 silly publish   readme: '# Promise with Queue\nExecute a function queue to receive value passed in resolving of the last call function.\n\nYou can override the default Promise or use a unique variable for this module. In any of the options you will have all the other standard Promise methods available.\n\n## Use\n```javascript\nvar Promise = require("promise-with-queue")\n\nvar func = new Promise.queue([\n    new Promise((resolve, reject) => { resolve(1) }),\n    data => new Promise((resolve, reject) => { \n        setTimeout(() => {\n            resolve(--data)\n        }, 3000) \n    }),\n    data => new Promise((resolve, reject) => { resolve(++data) }),\n])\n\nfunc.then(data => console.log(data), err => console.error(err))\n\n```\n',
+20 silly publish   readme: '# Queue Promise\nExecute a function queue to receive value passed in resolving of the last call function.\n\nYou can override the default Promise or use a unique variable for this module. In any of the options you will have all the other standard Promise methods available.\n\n## Use\n```javascript\nvar queue = require("queue-promise")\n\nvar func = queue([\n    new Promise((resolve, reject) => { resolve(1) }),\n    data => new Promise((resolve, reject) => { \n        setTimeout(() => {\n            resolve(--data)\n        }, 3000) \n    }),\n    data => new Promise((resolve, reject) => { resolve(++data) }),\n])\n\nfunc.then(data => console.log(data), err => console.error(err))\n\n```\n',
 20 silly publish   readmeFilename: 'README.md',
-20 silly publish   gitHead: '5ff0457522efe0ab5a4c000a221b206cff855e38',
-20 silly publish   _id: 'queue-promise@0.1.0',
-20 silly publish   _shasum: '9aaabbe3d6b38b76613d1c542b771a79057abe2c',
+20 silly publish   gitHead: '1ef99a5ebf62ff8a260a41e68857ab588ef66f0f',
+20 silly publish   _id: 'queue-promise@0.0.1',
+20 silly publish   _shasum: 'fcbe69734e8ff5c3e79cc2223c72566370eef5ae',
 20 silly publish   _from: '.' }
 21 verbose getPublishConfig undefined
 22 silly mapToRegistry name queue-promise
@@ -58,25 +58,25 @@
 25 silly mapToRegistry   type: 'tag' }
 26 silly mapToRegistry uri https://registry.npmjs.org/queue-promise
 27 verbose publish registryBase https://registry.npmjs.org/
-28 silly publish uploading /home/ubuntu/.npm/queue-promise/0.1.0/package.tgz
+28 silly publish uploading /home/ubuntu/.npm/queue-promise/0.0.1/package.tgz
 29 verbose request uri https://registry.npmjs.org/queue-promise
 30 verbose request sending authorization for write operation
-31 info attempt registry request try #1 at 8:19:10 PM
+31 info attempt registry request try #1 at 8:24:04 PM
 32 verbose request using bearer token for auth
-33 verbose request id 3116bc4dd37f90f2
+33 verbose request id be3e8f5918300520
 34 http request PUT https://registry.npmjs.org/queue-promise
 35 http 403 https://registry.npmjs.org/queue-promise
 36 verbose headers { 'content-type': 'application/json',
 36 verbose headers   'cache-control': 'max-age=300',
 36 verbose headers   'content-length': '107',
 36 verbose headers   'accept-ranges': 'bytes',
-36 verbose headers   date: 'Mon, 05 Jun 2017 20:19:11 GMT',
+36 verbose headers   date: 'Mon, 05 Jun 2017 20:24:05 GMT',
 36 verbose headers   via: '1.1 varnish',
 36 verbose headers   connection: 'keep-alive',
-36 verbose headers   'x-served-by': 'cache-ord1733-ORD',
+36 verbose headers   'x-served-by': 'cache-ord1746-ORD',
 36 verbose headers   'x-cache': 'MISS',
 36 verbose headers   'x-cache-hits': '0',
-36 verbose headers   'x-timer': 'S1496693950.467301,VS0,VE659',
+36 verbose headers   'x-timer': 'S1496694245.102024,VS0,VE333',
 36 verbose headers   vary: 'Accept-Encoding' }
 37 verbose request invalidating /home/ubuntu/.npm/registry.npmjs.org/queue-promise on PUT
 38 error publish Failed PUT 403
