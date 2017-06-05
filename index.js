@@ -1,4 +1,4 @@
-Promise.queue = function(promises){
+module.exports = function(promises){
     var _next = (data, resolve, reject) => {
         if (!this.promises) {
             this.promises = data;
@@ -22,6 +22,3 @@ Promise.queue = function(promises){
         _next(promises, resolve, reject)
     })
 }
-
-
-module.exports = Promise;
